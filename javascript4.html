@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form>
+             <div>
+                <label>Number 1:</label>
+                <input type="number" name="FirstNuumber">
+            </div>
+            <div>
+                <label>Number 2:</label>
+                <input type="number" name="SecondNumber"> 
+            </div>
+            <div>
+                <button type="button" id="multiply">Multiply</button>
+            </div>
+            <div id="result"></div>
+        </form>
+        <script>
+            function multiply(){
+                var number1 = document.getElementsByName("FirstNuumber")[0].value;
+                var number2 = document.getElementsByName("SecondNumber")[0].value;
+                
+                function keer(n1,n2){
+                    var uitkomst = (n1*n2);
+                    return uitkomst;
+                }
+                function showresult(){
+                    document.getElementById('result').innerHTML=keer(number1,number2);;
+                }
+                document.getElementById("multiply").addEventListener("click", showresult);
+
+            }
+            multiply();
+        </script>
+    </body>
+</html>
